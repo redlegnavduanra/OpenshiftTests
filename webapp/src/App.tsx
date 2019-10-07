@@ -1,8 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+
+import axios, { AxiosInstance, AxiosRequestConfig } from "axios";
 
 const App: React.FC = () => {
+  const http = axios.create({
+    baseURL: "redlegstestapi:8080"
+  });
+
+  http
+    .get("/")
+    .then(result => console.log("got a resutl from api", result))
+    .catch(err => console.log("api errored", err));
   return (
     <div className="App">
       <header className="App-header">
@@ -21,6 +31,6 @@ const App: React.FC = () => {
       </header>
     </div>
   );
-}
+};
 
 export default App;
