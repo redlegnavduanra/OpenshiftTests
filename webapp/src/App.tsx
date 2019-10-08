@@ -6,7 +6,7 @@ import axios, { AxiosInstance, AxiosRequestConfig } from "axios";
 
 const App: React.FC = () => {
   const http = axios.create({
-    baseURL: "redlegstestapi:8080"
+    baseURL: "http://testapi-redlegs-test-project.apps.ca-central-1.starter.openshift-online.com/api/v1"
   });
 
   http
