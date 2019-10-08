@@ -2,11 +2,11 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
-import axios, { AxiosInstance, AxiosRequestConfig } from "axios";
+import axios from "axios";
 
 const App: React.FC = () => {
   const http = axios.create({
-    baseURL: "http://testapi-redlegs-test-project.apps.ca-central-1.starter.openshift-online.com/api/v1"
+    baseURL: "http://testapi-redlegs-test-project.apps.ca-central-1.starter.openshift-online.com/"
   });
 
   http
